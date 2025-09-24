@@ -1,6 +1,6 @@
 ﻿namespace prjChalimondAutotest
 {
-    partial class Form1
+    partial class frmRegistroTurnos
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            textBox2 = new TextBox();
-            numericUpDown1 = new NumericUpDown();
-            textBox3 = new TextBox();
-            button1 = new Button();
+            numericUpDown2 = new NumericUpDown();
+            lblTitular = new Label();
+            lblAñoFab = new Label();
+            lblDominio = new Label();
+            lblNumTurn = new Label();
             button2 = new Button();
+            btnRegistrar = new Button();
+            textBox3 = new TextBox();
+            numericUpDown1 = new NumericUpDown();
+            textBox2 = new TextBox();
             lblTCantTurnos = new Label();
             lblTMasAntiguo = new Label();
             lblTDominio = new Label();
@@ -42,17 +47,12 @@
             lblDominio6Char = new Label();
             button3 = new Button();
             panel2 = new Panel();
-            lblAñoFab = new Label();
-            lblDominio = new Label();
-            lblNumTurn = new Label();
-            lblTitular = new Label();
-            numericUpDown2 = new NumericUpDown();
             lblRegistroTurnos = new Label();
             lblEstadisticas = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -63,7 +63,7 @@
             panel1.Controls.Add(lblDominio);
             panel1.Controls.Add(lblNumTurn);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnRegistrar);
             panel1.Controls.Add(textBox3);
             panel1.Controls.Add(numericUpDown1);
             panel1.Controls.Add(textBox2);
@@ -72,35 +72,49 @@
             panel1.Size = new Size(397, 208);
             panel1.TabIndex = 0;
             // 
-            // textBox2
+            // numericUpDown2
             // 
-            textBox2.Location = new Point(107, 74);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(144, 23);
-            textBox2.TabIndex = 1;
+            numericUpDown2.Location = new Point(107, 43);
+            numericUpDown2.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(144, 23);
+            numericUpDown2.TabIndex = 10;
             // 
-            // numericUpDown1
+            // lblTitular
             // 
-            numericUpDown1.Location = new Point(107, 109);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(144, 23);
-            numericUpDown1.TabIndex = 2;
+            lblTitular.AutoSize = true;
+            lblTitular.Location = new Point(10, 150);
+            lblTitular.Name = "lblTitular";
+            lblTitular.Size = new Size(40, 15);
+            lblTitular.TabIndex = 9;
+            lblTitular.Text = "Titular";
             // 
-            // textBox3
+            // lblAñoFab
             // 
-            textBox3.Location = new Point(107, 147);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(144, 23);
-            textBox3.TabIndex = 3;
+            lblAñoFab.AutoSize = true;
+            lblAñoFab.Location = new Point(10, 111);
+            lblAñoFab.Name = "lblAñoFab";
+            lblAñoFab.Size = new Size(91, 15);
+            lblAñoFab.TabIndex = 8;
+            lblAñoFab.Text = "Año fabricación";
             // 
-            // button1
+            // lblDominio
             // 
-            button1.Location = new Point(295, 43);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 49);
-            button1.TabIndex = 4;
-            button1.Text = "Registrar";
-            button1.UseVisualStyleBackColor = true;
+            lblDominio.AutoSize = true;
+            lblDominio.Location = new Point(10, 77);
+            lblDominio.Name = "lblDominio";
+            lblDominio.Size = new Size(53, 15);
+            lblDominio.TabIndex = 7;
+            lblDominio.Text = "Dominio";
+            // 
+            // lblNumTurn
+            // 
+            lblNumTurn.AutoSize = true;
+            lblNumTurn.Location = new Point(10, 43);
+            lblNumTurn.Name = "lblNumTurn";
+            lblNumTurn.Size = new Size(55, 15);
+            lblNumTurn.TabIndex = 6;
+            lblNumTurn.Text = "N° Turno";
             // 
             // button2
             // 
@@ -110,6 +124,40 @@
             button2.TabIndex = 5;
             button2.Text = "Salir";
             button2.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistrar
+            // 
+            btnRegistrar.Location = new Point(295, 43);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(75, 49);
+            btnRegistrar.TabIndex = 4;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(107, 147);
+            textBox3.MaxLength = 30;
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(144, 23);
+            textBox3.TabIndex = 3;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(107, 109);
+            numericUpDown1.Maximum = new decimal(new int[] { 2025, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(144, 23);
+            numericUpDown1.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(107, 74);
+            textBox2.MaxLength = 7;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(144, 23);
+            textBox2.TabIndex = 1;
             // 
             // lblTCantTurnos
             // 
@@ -186,49 +234,6 @@
             panel2.Size = new Size(397, 101);
             panel2.TabIndex = 8;
             // 
-            // lblAñoFab
-            // 
-            lblAñoFab.AutoSize = true;
-            lblAñoFab.Location = new Point(10, 111);
-            lblAñoFab.Name = "lblAñoFab";
-            lblAñoFab.Size = new Size(91, 15);
-            lblAñoFab.TabIndex = 8;
-            lblAñoFab.Text = "Año fabricación";
-            // 
-            // lblDominio
-            // 
-            lblDominio.AutoSize = true;
-            lblDominio.Location = new Point(10, 77);
-            lblDominio.Name = "lblDominio";
-            lblDominio.Size = new Size(53, 15);
-            lblDominio.TabIndex = 7;
-            lblDominio.Text = "Dominio";
-            // 
-            // lblNumTurn
-            // 
-            lblNumTurn.AutoSize = true;
-            lblNumTurn.Location = new Point(10, 43);
-            lblNumTurn.Name = "lblNumTurn";
-            lblNumTurn.Size = new Size(55, 15);
-            lblNumTurn.TabIndex = 6;
-            lblNumTurn.Text = "N° Turno";
-            // 
-            // lblTitular
-            // 
-            lblTitular.AutoSize = true;
-            lblTitular.Location = new Point(10, 150);
-            lblTitular.Name = "lblTitular";
-            lblTitular.Size = new Size(40, 15);
-            lblTitular.TabIndex = 9;
-            lblTitular.Text = "Titular";
-            // 
-            // numericUpDown2
-            // 
-            numericUpDown2.Location = new Point(107, 43);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(144, 23);
-            numericUpDown2.TabIndex = 10;
-            // 
             // lblRegistroTurnos
             // 
             lblRegistroTurnos.AutoSize = true;
@@ -249,7 +254,7 @@
             lblEstadisticas.Text = "Estadisticas";
             lblEstadisticas.Click += label12_Click;
             // 
-            // Form1
+            // frmRegistroTurnos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -258,14 +263,14 @@
             Controls.Add(lblRegistroTurnos);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "Form1";
+            Name = "frmRegistroTurnos";
             Text = "Registro de turnos";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -274,7 +279,7 @@
 
         private Panel panel1;
         private Button button2;
-        private Button button1;
+        private Button btnRegistrar;
         private TextBox textBox3;
         private NumericUpDown numericUpDown1;
         private TextBox textBox2;
