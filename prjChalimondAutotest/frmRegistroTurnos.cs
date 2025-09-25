@@ -18,6 +18,8 @@ namespace prjChalimondAutotest
         }
         int contadorTurnos = 0;
 
+        int cantidadTurnosIngresados, vehiculoMasAntiguo, cantidadVechiculosDominioCorto;
+
         Turno[] turnos = new Turno[50];
 
         public frmRegistroTurnos()
@@ -25,20 +27,7 @@ namespace prjChalimondAutotest
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -49,6 +38,14 @@ namespace prjChalimondAutotest
                 añoFabricacion = Convert.ToInt32(numAñoFabricacion.Value);
                 titular = txtTitular.Text;
                 numeroTurno = Convert.ToInt32(numNumTurno.Value);
+
+                bool turnoValido = Validaciones();
+                if (!turnoValido)
+                {
+
+                    return;
+
+                }
 
                 turnos[contadorTurnos] = new Turno();
                 turnos[contadorTurnos].Dominio = dominio;
@@ -80,41 +77,68 @@ namespace prjChalimondAutotest
                 return false;
             }
 
-            if(numAñoFabricacion.Value < 1950 || numAñoFabricacion.Value > DateTime.Now.Year)
+            if (numAñoFabricacion.Value < 1950 || numAñoFabricacion.Value > DateTime.Now.Year)
             {
                 MessageBox.Show("El año de fabricación debe estar entre 1950 y el año actual.");
                 return false;
             }
 
-            if(txtTitular.Text.Length <= 2)
+            if (txtTitular.Text.Length <= 2)
             {
                 MessageBox.Show("El nombre del titular debe tener más de 2 caracteres.");
                 return false;
             }
 
-            if (numNumTurno.Value > 0)
+            if (!(numeroTurno > 0))
             {
                 MessageBox.Show("El número de turno debe mayor a 0.");
                 return false;
             }
             bool turnoValido = validarNumTurno(numeroTurno);
 
-            if (!turnoValido) { 
+            if (!turnoValido)
+            {
 
                 MessageBox.Show("El número de turno ya existe. Por favor, ingrese un número de turno diferente.");
                 return false;
             }
-            
-            
+
+
 
             return true;
         }
 
+        private void calcularEstadisticas()
+        {
+            if (turnos.Length > 0)
+            {
+                cantidadTurnosIngresados = contadorTurnos;
+                vehiculoMasAntiguo = DateTime.Now.Year;
+                cantidadVechiculosDominioCorto = 0;
+
+
+                for (int i = 0; i < contadorTurnos; i++)
+                {
+                    if (turnos[i].AñoFabricacion < vehiculoMasAntiguo)
+                    {
+                        vehiculoMasAntiguo = turnos[i].AñoFabricacion;
+                    }
+                    if (turnos[i].Dominio.Length < 7)
+                    {
+                        cantidadVechiculosDominioCorto++;
+                    }
+                }
+                lblCantTurnos.Text = cantidadTurnosIngresados.ToString();
+                lblAñoMasAntiguo.Text = vehiculoMasAntiguo.ToString();
+                lblDominio6Char.Text = cantidadVechiculosDominioCorto.ToString();
+            }
+        }
+
         private bool validarNumTurno(int _numTurno)
         {
-            foreach (var _turno in turnos)
+            for (int i = 0; i < contadorTurnos; i++)
             {
-                if(_turno.NumeroTurno == _numTurno)
+                if (turnos[i].NumeroTurno == _numTurno)
                 {
                     return false;
                 }
@@ -122,6 +146,17 @@ namespace prjChalimondAutotest
 
             return true;
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            calcularEstadisticas();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
-    }
+
 }

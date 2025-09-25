@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroTurnos));
             panelRegistro = new Panel();
             numNumTurno = new NumericUpDown();
             lblTitular = new Label();
@@ -124,6 +125,7 @@
             btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // btnRegistrar
             // 
@@ -218,7 +220,7 @@
             btnConsultar.TabIndex = 7;
             btnConsultar.Text = "Consultar";
             btnConsultar.UseVisualStyleBackColor = true;
-            btnConsultar.Click += button3_Click;
+            btnConsultar.Click += btnConsultar_Click;
             // 
             // panelEstadisticas
             // 
@@ -242,7 +244,6 @@
             lblRegistroTurnos.Size = new Size(87, 15);
             lblRegistroTurnos.TabIndex = 9;
             lblRegistroTurnos.Text = "Registro turnos";
-            lblRegistroTurnos.Click += label11_Click;
             // 
             // lblEstadisticas
             // 
@@ -252,7 +253,6 @@
             lblEstadisticas.Size = new Size(67, 15);
             lblEstadisticas.TabIndex = 10;
             lblEstadisticas.Text = "Estadisticas";
-            lblEstadisticas.Click += label12_Click;
             // 
             // frmRegistroTurnos
             // 
@@ -263,7 +263,10 @@
             Controls.Add(lblRegistroTurnos);
             Controls.Add(panelEstadisticas);
             Controls.Add(panelRegistro);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmRegistroTurnos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Registro de turnos";
             panelRegistro.ResumeLayout(false);
             panelRegistro.PerformLayout();
