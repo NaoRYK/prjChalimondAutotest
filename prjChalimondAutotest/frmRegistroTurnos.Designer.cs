@@ -28,64 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            numericUpDown2 = new NumericUpDown();
+            panelRegistro = new Panel();
+            numNumTurno = new NumericUpDown();
             lblTitular = new Label();
             lblAñoFab = new Label();
             lblDominio = new Label();
             lblNumTurn = new Label();
-            button2 = new Button();
+            btnSalir = new Button();
             btnRegistrar = new Button();
-            textBox3 = new TextBox();
-            numericUpDown1 = new NumericUpDown();
-            textBox2 = new TextBox();
+            txtTitular = new TextBox();
+            numAñoFabricacion = new NumericUpDown();
+            txtDominio = new TextBox();
             lblTCantTurnos = new Label();
             lblTMasAntiguo = new Label();
             lblTDominio = new Label();
             lblCantTurnos = new Label();
             lblAñoMasAntiguo = new Label();
             lblDominio6Char = new Label();
-            button3 = new Button();
-            panel2 = new Panel();
+            btnConsultar = new Button();
+            panelEstadisticas = new Panel();
             lblRegistroTurnos = new Label();
             lblEstadisticas = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            panel2.SuspendLayout();
+            panelRegistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numNumTurno).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numAñoFabricacion).BeginInit();
+            panelEstadisticas.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panelRegistro
             // 
-            panel1.Controls.Add(numericUpDown2);
-            panel1.Controls.Add(lblTitular);
-            panel1.Controls.Add(lblAñoFab);
-            panel1.Controls.Add(lblDominio);
-            panel1.Controls.Add(lblNumTurn);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(btnRegistrar);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(numericUpDown1);
-            panel1.Controls.Add(textBox2);
-            panel1.Location = new Point(42, 30);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(397, 208);
-            panel1.TabIndex = 0;
+            panelRegistro.Controls.Add(numNumTurno);
+            panelRegistro.Controls.Add(lblTitular);
+            panelRegistro.Controls.Add(lblAñoFab);
+            panelRegistro.Controls.Add(lblDominio);
+            panelRegistro.Controls.Add(lblNumTurn);
+            panelRegistro.Controls.Add(btnSalir);
+            panelRegistro.Controls.Add(btnRegistrar);
+            panelRegistro.Controls.Add(txtTitular);
+            panelRegistro.Controls.Add(numAñoFabricacion);
+            panelRegistro.Controls.Add(txtDominio);
+            panelRegistro.Location = new Point(42, 30);
+            panelRegistro.Name = "panelRegistro";
+            panelRegistro.Size = new Size(397, 208);
+            panelRegistro.TabIndex = 0;
             // 
-            // numericUpDown2
+            // numNumTurno
             // 
-            numericUpDown2.Location = new Point(107, 43);
-            numericUpDown2.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(144, 23);
-            numericUpDown2.TabIndex = 10;
+            numNumTurno.Location = new Point(107, 43);
+            numNumTurno.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
+            numNumTurno.Name = "numNumTurno";
+            numNumTurno.Size = new Size(144, 23);
+            numNumTurno.TabIndex = 10;
             // 
             // lblTitular
             // 
             lblTitular.AutoSize = true;
             lblTitular.Location = new Point(10, 150);
             lblTitular.Name = "lblTitular";
-            lblTitular.Size = new Size(40, 15);
+            lblTitular.Size = new Size(41, 15);
             lblTitular.TabIndex = 9;
             lblTitular.Text = "Titular";
             // 
@@ -112,18 +112,18 @@
             lblNumTurn.AutoSize = true;
             lblNumTurn.Location = new Point(10, 43);
             lblNumTurn.Name = "lblNumTurn";
-            lblNumTurn.Size = new Size(55, 15);
+            lblNumTurn.Size = new Size(56, 15);
             lblNumTurn.TabIndex = 6;
             lblNumTurn.Text = "N° Turno";
             // 
-            // button2
+            // btnSalir
             // 
-            button2.Location = new Point(295, 126);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 44);
-            button2.TabIndex = 5;
-            button2.Text = "Salir";
-            button2.UseVisualStyleBackColor = true;
+            btnSalir.Location = new Point(295, 126);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 44);
+            btnSalir.TabIndex = 5;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnRegistrar
             // 
@@ -135,29 +135,29 @@
             btnRegistrar.UseVisualStyleBackColor = true;
             btnRegistrar.Click += btnRegistrar_Click;
             // 
-            // textBox3
+            // txtTitular
             // 
-            textBox3.Location = new Point(107, 147);
-            textBox3.MaxLength = 30;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(144, 23);
-            textBox3.TabIndex = 3;
+            txtTitular.Location = new Point(107, 147);
+            txtTitular.MaxLength = 30;
+            txtTitular.Name = "txtTitular";
+            txtTitular.Size = new Size(144, 23);
+            txtTitular.TabIndex = 3;
             // 
-            // numericUpDown1
+            // numAñoFabricacion
             // 
-            numericUpDown1.Location = new Point(107, 109);
-            numericUpDown1.Maximum = new decimal(new int[] { 2025, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(144, 23);
-            numericUpDown1.TabIndex = 2;
+            numAñoFabricacion.Location = new Point(107, 109);
+            numAñoFabricacion.Maximum = new decimal(new int[] { 2025, 0, 0, 0 });
+            numAñoFabricacion.Name = "numAñoFabricacion";
+            numAñoFabricacion.Size = new Size(144, 23);
+            numAñoFabricacion.TabIndex = 2;
             // 
-            // textBox2
+            // txtDominio
             // 
-            textBox2.Location = new Point(107, 74);
-            textBox2.MaxLength = 7;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(144, 23);
-            textBox2.TabIndex = 1;
+            txtDominio.Location = new Point(107, 74);
+            txtDominio.MaxLength = 7;
+            txtDominio.Name = "txtDominio";
+            txtDominio.Size = new Size(144, 23);
+            txtDominio.TabIndex = 1;
             // 
             // lblTCantTurnos
             // 
@@ -210,29 +210,29 @@
             lblDominio6Char.Size = new Size(0, 15);
             lblDominio6Char.TabIndex = 6;
             // 
-            // button3
+            // btnConsultar
             // 
-            button3.Location = new Point(299, 37);
-            button3.Name = "button3";
-            button3.Size = new Size(71, 34);
-            button3.TabIndex = 7;
-            button3.Text = "Consultar";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnConsultar.Location = new Point(299, 37);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(71, 34);
+            btnConsultar.TabIndex = 7;
+            btnConsultar.Text = "Consultar";
+            btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += button3_Click;
             // 
-            // panel2
+            // panelEstadisticas
             // 
-            panel2.Controls.Add(lblDominio6Char);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(lblAñoMasAntiguo);
-            panel2.Controls.Add(lblCantTurnos);
-            panel2.Controls.Add(lblTDominio);
-            panel2.Controls.Add(lblTMasAntiguo);
-            panel2.Controls.Add(lblTCantTurnos);
-            panel2.Location = new Point(42, 270);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(397, 101);
-            panel2.TabIndex = 8;
+            panelEstadisticas.Controls.Add(lblDominio6Char);
+            panelEstadisticas.Controls.Add(btnConsultar);
+            panelEstadisticas.Controls.Add(lblAñoMasAntiguo);
+            panelEstadisticas.Controls.Add(lblCantTurnos);
+            panelEstadisticas.Controls.Add(lblTDominio);
+            panelEstadisticas.Controls.Add(lblTMasAntiguo);
+            panelEstadisticas.Controls.Add(lblTCantTurnos);
+            panelEstadisticas.Location = new Point(42, 270);
+            panelEstadisticas.Name = "panelEstadisticas";
+            panelEstadisticas.Size = new Size(397, 101);
+            panelEstadisticas.TabIndex = 8;
             // 
             // lblRegistroTurnos
             // 
@@ -261,28 +261,28 @@
             ClientSize = new Size(451, 397);
             Controls.Add(lblEstadisticas);
             Controls.Add(lblRegistroTurnos);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(panelEstadisticas);
+            Controls.Add(panelRegistro);
             Name = "frmRegistroTurnos";
             Text = "Registro de turnos";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panelRegistro.ResumeLayout(false);
+            panelRegistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numNumTurno).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numAñoFabricacion).EndInit();
+            panelEstadisticas.ResumeLayout(false);
+            panelEstadisticas.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
-        private Button button2;
+        private Panel panelRegistro;
+        private Button btnSalir;
         private Button btnRegistrar;
-        private TextBox textBox3;
-        private NumericUpDown numericUpDown1;
-        private TextBox textBox2;
+        private TextBox txtTitular;
+        private NumericUpDown numAñoFabricacion;
+        private TextBox txtDominio;
         private Label lblTitular;
         private Label lblAñoFab;
         private Label lblDominio;
@@ -293,9 +293,9 @@
         private Label lblCantTurnos;
         private Label lblAñoMasAntiguo;
         private Label lblDominio6Char;
-        private Button button3;
-        private Panel panel2;
-        private NumericUpDown numericUpDown2;
+        private Button btnConsultar;
+        private Panel panelEstadisticas;
+        private NumericUpDown numNumTurno;
         private Label lblRegistroTurnos;
         private Label lblEstadisticas;
     }
